@@ -1,5 +1,12 @@
+# Debug flags
+# uncomment to build debug (and comment the Release flags)
+CFLAGS = -O0 -Wall -Wextra -Wpedantic -std=c99 -DDEBUG -ggdb
+
+# Release flags
+# Uncomment to build release (and comment the Debug flags)
+#CFLAGS = -O2 -Wall -Wextra -Wpedantic -std=c99
+
 CC = gcc
-CFLAGS = -O2 -Wall -Wextra -Wpedantic -std=c99 -DDEBUG
 BUILD_DIR = Build
 
 
