@@ -47,7 +47,7 @@ int main(int argc, char **argv) {
     char *line;
     line = (char*)calloc(BUFF_SIZE, sizeof(char));
 
-    unsigned int i = 0;
+    uint64_t i = 0;
     char c;
     for (i = 0; (c = fgetc(fp)) != EOF; ++i) {
         line[i] = c;

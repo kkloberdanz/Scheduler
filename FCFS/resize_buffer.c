@@ -22,9 +22,9 @@ void rb_destroy(struct resize_buffer* b) {
 }
 
 void rb_append(struct resize_buffer* b, const char* str) {
-    unsigned int len_str = strlen(str);
+    uint64_t len_str = strlen(str);
     if (b->last_element_index + len_str >= b->size) {
-        unsigned int new_size = (len_str + b->size) * 2;
+        uint64_t new_size = (len_str + b->size) * 2;
         b->string = realloc(b->string, new_size);
         b->size = new_size;
     }
@@ -32,9 +32,9 @@ void rb_append(struct resize_buffer* b, const char* str) {
     strcat(b->string, str);
 }
 
-void rb_remove_substring(struct resize_buffer* b, unsigned int x, unsigned int y) {
-    unsigned int new_len = b->last_element_index - y - x;
-    unsigned int i;
+void rb_remove_substring(struct resize_buffer* b, uint64_t x, uint64_t y) {
+    uint64_t new_len = b->last_element_index - y - x;
+    uint64_t i;
     for (i = 0; b->string[i + y] != '\0'; ++i) {
         b->string[i + x] = b->string[i + y];
     }
