@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -O2 -Wall -Wextra -Wpedantic -std=c99
+CFLAGS = -O2 -Wall -Wextra -Wpedantic -std=c99 -DDEBUG
 BUILD_DIR = Build
 
 

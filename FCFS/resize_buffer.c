@@ -25,12 +25,10 @@ void rb_append(struct resize_buffer* b, const char* str) {
     unsigned int len_str = strlen(str);
     if (b->last_element_index + len_str >= b->size) {
         unsigned int new_size = (len_str + b->size) * 2;
-        printf("resizing from: %u to: %u\n", b->size, new_size);
         b->string = realloc(b->string, new_size);
         b->size = new_size;
     }
     b->last_element_index += strlen(str);
-    printf("last_element_index: %d\n", b->last_element_index);
     strcat(b->string, str);
 }
 
