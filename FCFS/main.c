@@ -1,3 +1,11 @@
+/*
+ * Programmer: Kyle Kloberdanz
+ * Date Created: 18 Oct 2016
+ * File: main.c
+ *
+ * Description: Functions for a easily resizable string.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
